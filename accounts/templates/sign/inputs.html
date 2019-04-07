@@ -1,0 +1,11 @@
+{% csrf_token %}
+<div class="row " style="margin-top:25px;">
+    {% for fieled in form %}
+    <div class="col-md-12 inp_div" >
+        <div class="input_Container">
+                {{ fieled }}
+            <span class="focus-border"></span>
+        </div>
+	</div>	
+<p class="Error" style="color: red">{{fieled.errors}}</p>
+{% endfor %}
